@@ -11,3 +11,44 @@
 [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 [“Russia”, “Denmark”, “Kazan”] → []  */
 
+
+string[] FillMass(string[] input, int countElements)
+{
+    string[] mass = new string[countElements];
+    for(int i = 0, j = 0; i < input.Length && j < mass.Length; i++)
+    {
+        if(input[i].Length < 4)
+        {
+            mass[j] = input[i];
+            j++;
+        }
+    }
+    return mass;
+} 
+
+string[] input = new string [] { "Hello", "2", "world", ":-)"};
+int countElements = 0;
+
+
+for(int i = 0; i < input.Length; i++)
+{
+    if(input[i].Length < 4)
+    {
+        countElements++;
+    }
+}
+ string[] result;
+ 
+ if(countElements > 0)
+ {
+    result = FillMass(input, countElements);
+ }
+ else
+ {
+    result = new string[0];
+ }
+
+for(int i = 0; i < result.Length; i++)
+{
+    Console.Write($"{result[i]} ");
+}
