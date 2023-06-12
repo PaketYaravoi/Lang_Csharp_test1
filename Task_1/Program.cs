@@ -26,9 +26,9 @@ string[] FillMass(string[] input, int countElements)
     return mass;
 } 
 
+
 string[] input = new string [] { "Hello", "2", "world", ":-)"};
 int countElements = 0;
-
 
 for(int i = 0; i < input.Length; i++)
 {
